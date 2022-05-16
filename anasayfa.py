@@ -13,7 +13,7 @@ import subprocess
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setObjectName("Ana Sayfa")
         MainWindow.resize(800, 583)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -53,7 +53,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Ana Sayfa"))
         self.label.setText(_translate("MainWindow", "İTÜ MTAL KÜTÜPHANE OTOMASYONU"))
         self.bt1.setText(_translate("MainWindow", "KİTAP VER"))
         self.bt2.setText(_translate("MainWindow", "VERİLEN KİTAPLAR"))

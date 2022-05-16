@@ -10,7 +10,8 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from database import *
-
+from datetime import date
+today = date.today()
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -63,13 +64,13 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Kitap Ödünç Verme"))
         self.label.setText(_translate("MainWindow", "ÖĞRENCİ ADI"))
         self.label_2.setText(_translate("MainWindow", "KİTAP ADI"))
         self.pushButton.setText(_translate("MainWindow", "ONAYLA"))
     def Onayla(self):
         if(len(self.lineEdit.text()) > 0 and len(self.lineEdit_2.text())):
-            insert(self.lineEdit_2.text(), self.lineEdit.text(), '0')
+            insert(self.lineEdit_2.text(), self.lineEdit.text(), str(today.strftime("%d/%m/%Y")))
 
 if __name__ == "__main__":
     import sys

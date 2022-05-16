@@ -46,13 +46,13 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Öğrencilere Verilen Kitaplar"))
         self.label.setText(_translate("MainWindow", "ÖĞRENCİLERE VERİLEN KİTAPLAR"))
         ogrenciler = print_all()
 
         yazı = ""
         for i in range(len(ogrenciler)):
-            yazı += f"Öğrenci: {ogrenciler[i][1]} Aldığı kitap: {ogrenciler[i][2]}\n"
+            yazı += f"Öğrenci: {ogrenciler[i][1]} Aldığı kitap: {ogrenciler[i][2]}\n Aldığı Tarih: {ogrenciler[i][3]}\n"
         self.label_2.setText(yazı)
 
 
